@@ -7,17 +7,17 @@ awslocal lambda delete-function --function-name lambdaSuccess
 awslocal lambda delete-function --function-name lambdaFailed
 
 awslocal lambda create-function --function-name lambdaStarter \
-    --code S3Bucket="__local__",S3Key="/Users/anil.ustundag/Github/localstack-demo/step_functions/" \
+    --code S3Bucket="__local__",S3Key="/Users/rnjai/Desktop/localstack-demo/step_functions/" \
     --handler lambdaStarter.handler \
     --runtime nodejs12.x \
     --role whatever;
 awslocal lambda create-function --function-name lambdaSuccess \
-    --code S3Bucket="__local__",S3Key="/Users/anil.ustundag/Github/localstack-demo/step_functions/" \
+    --code S3Bucket="__local__",S3Key="/Users/rnjai/Desktop/localstack-demo/step_functions/" \
     --handler lambdaSuccess.handler \
     --runtime nodejs12.x \
     --role whatever;
 awslocal lambda create-function --function-name lambdaFailed \
-    --code S3Bucket="__local__",S3Key="/Users/anil.ustundag/Github/localstack-demo/step_functions/" \
+    --code S3Bucket="__local__",S3Key="/Users/rnjai/Desktop/localstack-demo/step_functions/" \
     --handler lambdaFailed.handler \
     --runtime nodejs12.x \
     --role whatever;

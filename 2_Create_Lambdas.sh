@@ -7,17 +7,17 @@ localIPAddress=$(docker inspect -f "{{ .NetworkSettings.IPAddress }}" $container
 echo "Localstack container IP is $localIPAddress"
 
 awslocal lambda create-function --function-name lambdaUrlValidator \
-    --code S3Bucket="__local__",S3Key="/Users/anil.ustundag/Github/localstack-demo/lambdas/lambdaUrlValidator" \
+    --code S3Bucket="__local__",S3Key="/Users/rnjai/Desktop/localstack-demo/lambdas/lambdaUrlValidator" \
     --handler index.handler \
     --runtime nodejs12.x \
     --role whatever;
 awslocal lambda create-function --function-name lambdaScraper \
-    --code S3Bucket="__local__",S3Key="/Users/anil.ustundag/Github/localstack-demo/lambdas/lambdaScraper" \
+    --code S3Bucket="__local__",S3Key="/Users/rnjai/Desktop/localstack-demo/lambdas/lambdaScraper" \
     --handler index.handler \
     --runtime nodejs12.x \
     --role whatever;
 awslocal lambda create-function --function-name lambdaNotifier \
-    --code S3Bucket="__local__",S3Key="/Users/anil.ustundag/Github/localstack-demo/lambdas/lambdaNotifier" \
+    --code S3Bucket="__local__",S3Key="/Users/rnjai/Desktop/localstack-demo/lambdas/lambdaNotifier" \
     --handler index.handler \
     --runtime nodejs12.x \
     --role whatever;
